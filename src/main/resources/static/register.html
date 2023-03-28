@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+<div class="main">
+<div class="title">
+    <span>用户注册</span>
+</div>
+    <!--action="/api/user/reg" method="post"-->
+    <form class="login-form" action="/api/user/reg" method="post" name="user">
+        <!--输入框-->
+        <div class="input-content">
+            <!--autoFocus-->
+            <div>
+                <input type="text" autocomplete="off"
+                       placeholder="用户名" name="name" required/>
+            </div>
+
+            <div>
+                <input type="password"
+                       autocomplete="off" placeholder="输入密码" name="password" required maxlength="32"/>
+            </div>
+            <div>
+                <input type="password"
+                       autocomplete="off" placeholder="再次输入密码" name="passwordCheck" required maxlength="32"/>
+            </div>
+
+        </div>
+
+        <!--register-->
+        <div style="text-align: center">
+            <button type="submit" class="enter-btn" >注册</button>
+        </div>
+
+        <div class="foor">
+            <div class="left"><span>忘记密码 ?</span></div>
+        </div>
+        <div class="foor">
+            <div class="right"><span onclick="toLogin()">已有账户? 去登陆</span></div>
+        </div>
+    </form>
+
+</div>
+</body>
+<script>
+    function toLogin(){
+        window.location.href="login"
+    }
+</script>
+</html>
